@@ -33,12 +33,12 @@ Console.WriteLine(tfIdfService.CompressedTrainingData[0].Length); //TfIdf dimens
 
 var pcaService = new PCAServiceSvd(tfIdfService.CompressedTrainingData.ToList(), 10000);
 
-// //Compute PCA from training data in runtime
-//  pcaService.Learn(); 
+//Compute PCA from training data in runtime
+ pcaService.Learn(); 
 
-//Load from .bin training data file
-pcaService.TrainingData = tfIdfService.CompressedTrainingData;
-pcaService.LearnFromBinary("D:\\ModelTraining\\pca_model_32946To10000.bin");
+// //Load from .bin training data file
+// pcaService.TrainingData = tfIdfService.CompressedTrainingData;
+// pcaService.LearnFromBinary("D:\\ModelTraining\\pca_model_32946To10000.bin");
 
 pcaService.CompressAll();
 
